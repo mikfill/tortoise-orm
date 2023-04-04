@@ -1,0 +1,5 @@
+venv/
+__pycache__
+*.sql
+db.db
+manage_db_template.py
