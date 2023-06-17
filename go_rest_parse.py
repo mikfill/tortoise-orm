@@ -49,4 +49,4 @@ async def fetch_data() -> list[dict]:
     return result
 
 
-#print(json.dumps(asyncio.run(fetch_data()), indent=1))
+# print(json.dumps(asyncio.run(fetch_data()), indent=1))

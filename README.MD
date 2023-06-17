@@ -1,24 +1,24 @@
 # HOW TO RUN
 
-### 1. Create virtual env
+## 1. Create virtual env
 
 ```bash
 python -m venv venv
 ```
 
-### 2. Install dependencies
+## 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run manage_db.py
+## 3. Run manage_db.py
 
 ```bash
 (venv)python manage_db.py
 ```
 
-After this steps we initialize sqlite database with data come from https://gorest.co.in/public/v2/
+After this steps we initialize sqlite database with data come from <https://gorest.co.in/public/v2/>
 
 Models
 
@@ -61,4 +61,4 @@ Models
 | due_on | Datetime |  |
 | status | Character | Maximum Length: 10 |
 
-## Next step is add fast api...
+## Add fast api
