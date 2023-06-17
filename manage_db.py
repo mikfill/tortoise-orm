@@ -1,9 +1,9 @@
 import asyncio
 
-from tortoise import Tortoise, run_async
+from tortoise import Tortoise
 
 from go_rest_parse import BASE_URL, fetch_data
-from orm_schema import Comments, Posts, Todos, Users
+from models import Comments, Posts, Todos, Users
 
 
 async def init_database():
@@ -30,9 +30,10 @@ async def init_database():
         Users.bulk_create(user_objs),
         Posts.bulk_create(post_objs),
         Comments.bulk_create(comment_objs),
-        Todos.bulk_create(todo_objs)
+        Todos.bulk_create(todo_objs),
     )
 
     await Tortoise.close_connections()
+
 
 asyncio.run(init_database())
