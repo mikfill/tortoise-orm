@@ -1,5 +1,4 @@
 import asyncio
-import json
 import httpx
 
 
@@ -47,6 +46,3 @@ async def fetch_data() -> list[dict]:
         result = await asyncio.gather(*tasks)
 
     return result
-
-
-# print(json.dumps(asyncio.run(fetch_data()), indent=1))
