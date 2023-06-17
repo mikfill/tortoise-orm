@@ -1,5 +1,6 @@
 from tortoise import fields
 from tortoise.models import Model
+from tortoise.contrib.pydantic import pydantic_model_creator
 
 
 class Users(Model):
@@ -63,3 +64,9 @@ class Todos(Model):
 
     def __str__(self) -> str:
         return self.title
+
+
+User_Pydantic = pydantic_model_creator(Users, name="User")
+Post_Pydantic = pydantic_model_creator(Posts, name="Post")
+Comment_Pydantic = pydantic_model_creator(Comments, name="Comment")
+Todo_Pydantic = pydantic_model_creator(Todos, name="Todo")

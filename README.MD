@@ -12,53 +12,14 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-## 3. Run manage_db.py
+## 3. Run app
 
 ```bash
-(venv)python manage_db.py
+(venv)python uvicorn main:app --reload
 ```
 
-After this steps we initialize sqlite database with data come from <https://gorest.co.in/public/v2/>
+### If you run app first time you need to initialize database
 
-Models
+Go to endpoint <http://localhost:8000/init-db>
 
-* User
-
-| Field Name | Data Type | Constraints |
-| --- | --- | --- |
-| id | Integer | Primary Key |
-| name | Character | Maximum Length: 64 |
-| email | Character | Maximum Length: 64 |
-| gender | Character | Maximum Length: 10 |
-| status | Character | Maximum Length: 10 |
-
-* Posts
-
-| Field Name | Data Type | Constraints |
-| --- | --- | --- |
-| id | Integer | Primary Key |
-| user_id | Integer |  |
-| title | Character | Maximum Length: 256 |
-| body | Text |  |
-
-* Comments
-
-| Field Name | Data Type | Constraints |
-| --- | --- | --- |
-| id | Integer | Primary Key |
-| post_id | Integer |  |
-| name | Character | Maximum Length: 64 |
-| email | Character | Maximum Length: 64 |
-| body | Text |  |
-
-* Todos
-
-| Field Name | Data Type | Constraints |
-| --- | --- | --- |
-| id | Integer | Primary Key |
-| user_id | Integer |  |
-| title | Character | Maximum Length: 256 |
-| due_on | Datetime |  |
-| status | Character | Maximum Length: 10 |
-
-## Add fast api
+After this  we initialize sqlite database with data come from <https://gorest.co.in/public/v2/> and all ready to work.
