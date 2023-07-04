@@ -3,6 +3,8 @@ from typing import List
 from fastapi import FastAPI
 from tortoise import Tortoise, run_async
 from tortoise.contrib.fastapi import HTTPNotFoundError, register_tortoise
+from starlette.responses import RedirectResponse
+
 
 from parse import BASE_URL, fetch_data
 from models import (
@@ -19,6 +21,11 @@ from models import (
 DB_PATH = "db.db"
 
 app = FastAPI()
+
+
+@app.get("/", include_in_schema=False)
+async def redirect_to_docs():
+    return RedirectResponse(url="/docs")
 
 
 @app.get("/init-db")
