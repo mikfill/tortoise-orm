@@ -1,6 +1,6 @@
 import asyncio
-import httpx
 
+import httpx
 
 BASE_URL = "https://gorest.co.in/public/v2/"
 

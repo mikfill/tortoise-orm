@@ -1,12 +1,11 @@
 import asyncio
 from typing import List
+
 from fastapi import FastAPI
+from starlette.responses import RedirectResponse
 from tortoise import Tortoise, run_async
 from tortoise.contrib.fastapi import HTTPNotFoundError, register_tortoise
-from starlette.responses import RedirectResponse
 
-
-from parse import BASE_URL, fetch_data
 from models import (
     Comment_Pydantic,
     Comments,
@@ -17,6 +16,7 @@ from models import (
     User_Pydantic,
     Users,
 )
+from parse import BASE_URL, fetch_data
 
 DB_PATH = "db.db"
 
