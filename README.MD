@@ -15,7 +15,7 @@ pip install -r requirements.txt
 ## 3. Run app
 
 ```bash
-(venv)uvicorn main:app --reload
+uvicorn main:app --reload
 ```
 
 ### If you run app first time you need to initialize database
