@@ -1,6 +1,6 @@
 .venv/
 __pycache__
 *.sql
-db.db
+db.db*
 manage_db_template.py
 manage_db_old.py
